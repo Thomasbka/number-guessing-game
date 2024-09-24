@@ -47,7 +47,7 @@ const game = function(correctNumber, attempts = 0, maxAttempts = 10) {
   game(correctNumber, attempts, maxAttempts);
 };
 
-const calculateScore = function(acttempts) {
+const calculateScore = function(attempts) {
   return 100 - (attempts -1) * 10;
 };
 
