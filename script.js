@@ -4,8 +4,8 @@ Here's how to play:
 1. I will choose a number between 1 and 100.
 2. Your goal is to guess the correct number in 10 or fewer attempts.
 3. After each guess, I'll tell you whether your guess is too low, too high, or correct.
-4. To play, please use Google Chrome and open the browser's inspector (press either F12, cmd-option-i, or right-click and select 'Inspect'). Then go to the "Console" tab to see game updates.
-Good luck!
+4. To play, please use the console on your browser's inspection tool. 
+Good luck! :)
 `);
 
 const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1;
