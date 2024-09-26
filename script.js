@@ -59,7 +59,15 @@ const game = function(correctNumber, attempts = 0, maxAttempts = 10) {
     game(correctNumber, attempts, maxAttempts); 
   }, 100);
 };
+<<<<<<< Updated upstream
 const calculateScore = (leftAttempts, wasGuessed) => (wasGuessed ? 20 + (leftAttempts * 10) : 0);
 setTimeout(() => {
   game(generateRandomNumber());
 }, 100);
+=======
+
+const calculateScore = (leftAttempts, wasGuessed) => wasGuessed ? 20 + (leftAttempts * 10) : (leftAttempts * 10); 
+
+game(generateRandomNumber()); 
+
+>>>>>>> Stashed changes
