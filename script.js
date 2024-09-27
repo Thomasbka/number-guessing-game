@@ -13,7 +13,6 @@ const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1;
 
 const getPlayerGuess = function() {
   const guess = parseInt(prompt("Enter a guess between 1 and 100: "), 10);
-
   if (guess >= 1 && guess <= 100) {
     return guess;
   } else {
