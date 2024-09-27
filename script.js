@@ -59,7 +59,7 @@ const game = function(correctNumber, attempts = 0, maxAttempts = 10) {
     game(correctNumber, attempts, maxAttempts); 
   }, 100);
 };
-const calculateScore = (leftAttempts, wasGuessed) => (wasGuessed ? 20 + (leftAttempts * 10) : 0);
+const calculateScore = (leftAttempts, wasGuessed) => wasGuessed ? 20 + (leftAttempts * 10) : 0;
 setTimeout(() => {
   game(generateRandomNumber());
 }, 100);
