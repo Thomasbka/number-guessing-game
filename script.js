@@ -35,6 +35,7 @@ const checkGuess = function(playerGuess, correctNumber) {
 const game = function(correctNumber, attempts = 0, maxAttempts = 10) {
   if (attempts >= maxAttempts) {
     console.log(`You have used all your ${maxAttempts} attempts! The correct number was ${correctNumber}.`);
+    playAgain();
     return;
   }
   const playerGuess = getPlayerGuess();
@@ -53,13 +54,25 @@ const game = function(correctNumber, attempts = 0, maxAttempts = 10) {
       console.log(`Congratulations! ${playerGuess} is the correct number. You needed ${attempts} attempts!`);
       const score = calculateScore(leftAttempts, true);
       console.log(`Your SCORE is ${score}!`);
+      playAgain()
       return;
   }
   setTimeout(() => {
     game(correctNumber, attempts, maxAttempts); 
   }, 100);
 };
+
 const calculateScore = (leftAttempts, wasGuessed) => wasGuessed ? 20 + (leftAttempts * 10) : 0;
 setTimeout(() => {
   game(generateRandomNumber());
 }, 100);
+
+function playAgain() {
+  let response = prompt("Do you want to play again? (yes/no)").toLowerCase();
+  if (response === "yes") {
+      console.clear();
+      game();
+  } else {
+      alert("Thanks for playing! See you next time.");
+  }
+};
