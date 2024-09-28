@@ -62,9 +62,8 @@ const game = function(correctNumber, attempts = 0, maxAttempts = 10) {
 };
 
 const calculateScore = (leftAttempts, wasGuessed) => wasGuessed ? 20 + (leftAttempts * 10) : 0;
-setTimeout(() => {
-  game(generateRandomNumber());
-}, 100);
+
+game(generateRandomNumber());
 
 function playAgain() {
   let response = prompt("Do you want to play again? (yes/no)").toLowerCase();
