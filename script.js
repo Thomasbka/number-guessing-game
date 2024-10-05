@@ -78,7 +78,6 @@ const calculateScore = (leftAttempts, wasGuessed) => wasGuessed ? 20 + (leftAtte
 
 function playAgain() {
   let response = confirm("Do you want to play again?");
-
   if (response) {
     console.clear();
     game();
