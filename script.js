@@ -15,6 +15,7 @@ const getPlayerGuess = function() {
   let guess = prompt("Enter a guess between 1 and 100: ");
   if (guess === null) {
     alert("Game ended.");
+    console.log("Game was CANCELED by player!")
     return null; 
   }
 
