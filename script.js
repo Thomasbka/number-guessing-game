@@ -77,21 +77,14 @@ const game = function(correctNumber = generateRandomNumber(), attempts = 0, maxA
 const calculateScore = (leftAttempts, wasGuessed) => wasGuessed ? 20 + (leftAttempts * 10) : 0;
 
 function playAgain() {
-  let response = prompt("Do you want to play again? (yes/no)");
-  
-  if (response === null) {
-    alert("Thanks for playing! See you next time.");
-    return;
-  }
+  let response = confirm("Do you want to play again?");
 
-  response = response.trim().toLowerCase();
-
-  if (response === "yes") {
+  if (response) {
     console.clear();
     game();
   } else {
     alert("Thanks for playing! See you next time.");
   }
-};
+}
 
 game();
